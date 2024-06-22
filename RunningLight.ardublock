@@ -1,0 +1,616 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all-esp32</toolbox>
+  <block type="arduino_setup" id="x6@)$khYQUb_]9M?`4b]" x="-735" y="-101">
+    <statement name="MySetup">
+      <block type="variables_set_init" id=";kx7X=PGjr=*`!u$P@^-">
+        <field name="VAR">tempoh</field>
+        <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+        <value name="VALUE">
+          <block type="math_number" id="ow4VUTcFGz6C}e0~AbcK">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="M^19rKr(?AzF7L;jImA[">
+            <field name="VAR">tempoh</field>
+            <value name="VALUE">
+              <block type="math_number" id="-mv|uo2JGjHHpigOb;LT">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="procedures_callnoreturn" id="CrP$@iVpN%mr)Sg5~944">
+        <mutation name="kiri"></mutation>
+        <next>
+          <block type="procedures_callnoreturn" id="E2sI/Jq%(;{-}H=|}wDH">
+            <mutation name="kanan"></mutation>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="+voV`jhTFwEFs+sqMg+~" x="-354" y="-98">
+    <field name="NAME">kiri</field>
+    <statement name="STACK">
+      <block type="inout_digital_write" id="JPQf[h/:!E|9$r7oj!78">
+        <value name="PIN">
+          <shadow type="math_number" id="K;pEt4D9}W0oF9kK$PMC">
+            <field name="NUM">19</field>
+          </shadow>
+        </value>
+        <value name="STAT">
+          <shadow type="math_number" id="!mNAzPgdJgGs4=u?04!#">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="inout_digital_write" id="NE8%,Pnyc-D(R)X8?,yI">
+            <value name="PIN">
+              <shadow type="math_number" id="FXc#mzQ.OXxubS:v1NWi">
+                <field name="NUM">18</field>
+              </shadow>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id="BxjgVYsS0?}uoYURC5Ki">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="base_delay" id="AXl_l!;,88nq:T)0l9@[">
+                <field name="unite">m</field>
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id="-})LXVaNCIweEfA1|h]#">
+                    <field name="NUM">1000</field>
+                  </shadow>
+                  <block type="variables_get" id="A?[Qk)Ab2D?%T!{I;2JI">
+                    <field name="VAR">tempoh</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="inout_digital_write" id="%gBa:oS6?Yc_;;_t#vf:">
+                    <value name="PIN">
+                      <shadow type="math_number" id="TX#!wIi~M@v{F!?t$_F1">
+                        <field name="NUM">18</field>
+                      </shadow>
+                    </value>
+                    <value name="STAT">
+                      <shadow type="math_number" id="r2P!V[$;7J/d_`auoScr">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="inout_digital_write" id=":3G%xNpQP,}SE8afS-:0">
+                        <value name="PIN">
+                          <shadow type="math_number" id=";z!W_Y6lE+)m.9/:`i,@">
+                            <field name="NUM">19</field>
+                          </shadow>
+                        </value>
+                        <value name="STAT">
+                          <shadow type="math_number" id="~EZ7oi;33uNIGQ(RSx+W">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="base_delay" id="/rwz:z5eIZ-Aj;!dTe^/">
+                            <field name="unite">m</field>
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="-})LXVaNCIweEfA1|h]#">
+                                <field name="NUM">1000</field>
+                              </shadow>
+                              <block type="variables_get" id="lidps4%0/QN%Z_[PU#z-">
+                                <field name="VAR">tempoh</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="inout_digital_write" id="8.2d-C0ns=M-{v#9G.r3">
+                                <value name="PIN">
+                                  <shadow type="math_number" id="OIq}h)%8IodcA8DRYlU)">
+                                    <field name="NUM">5</field>
+                                  </shadow>
+                                </value>
+                                <value name="STAT">
+                                  <shadow type="math_number" id="+Hrr5Gh~bm}l:UUViUbr">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="inout_digital_write" id="IuCzf5{S)Pd`mD1Ci_Gq">
+                                    <value name="PIN">
+                                      <shadow type="math_number" id="-8s%#V]4{-k{9_OaQD%2">
+                                        <field name="NUM">18</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="STAT">
+                                      <shadow type="math_number" id="KrIIj(^4SWVI5i3G:u%W">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="base_delay" id="+dv7=cSSNl:T/`H{39AJ">
+                                        <field name="unite">m</field>
+                                        <value name="DELAY_TIME">
+                                          <shadow type="math_number" id="-})LXVaNCIweEfA1|h]#">
+                                            <field name="NUM">1000</field>
+                                          </shadow>
+                                          <block type="variables_get" id="45oB3oOx9).XxI%sYWm[">
+                                            <field name="VAR">tempoh</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="inout_digital_write" id="(64P~)udk^KE`d?Y8P~$">
+                                            <value name="PIN">
+                                              <shadow type="math_number" id="ZKr(2*agAa4])D.etCC3">
+                                                <field name="NUM">17</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="STAT">
+                                              <shadow type="math_number" id="/P~ZYbRe@V{l?gLn*Gq0">
+                                                <field name="NUM">0</field>
+                                              </shadow>
+                                            </value>
+                                            <next>
+                                              <block type="inout_digital_write" id=";fs}N^bC^VP2WxVNJ:}*">
+                                                <value name="PIN">
+                                                  <shadow type="math_number" id="l0XrlxJ1[ZK*Xy(RE9v-">
+                                                    <field name="NUM">5</field>
+                                                  </shadow>
+                                                </value>
+                                                <value name="STAT">
+                                                  <shadow type="math_number" id="uWm*Fiw1xx~^aECT9:XP">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="base_delay" id="d2q)_]WTaInDxIjeUW4|">
+                                                    <field name="unite">m</field>
+                                                    <value name="DELAY_TIME">
+                                                      <shadow type="math_number" id="-})LXVaNCIweEfA1|h]#">
+                                                        <field name="NUM">1000</field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="=v?0+Uz}#U__S_#H$)|T">
+                                                        <field name="VAR">tempoh</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="inout_digital_write" id="O644_HnrQu}Tq`Zgc^(3">
+                                                        <value name="PIN">
+                                                          <shadow type="math_number" id="QT/;d4Z!S6udKx{Y,[Mx">
+                                                            <field name="NUM">16</field>
+                                                          </shadow>
+                                                        </value>
+                                                        <value name="STAT">
+                                                          <shadow type="math_number" id="dKZdlv1~k68*QlZ0k,dt">
+                                                            <field name="NUM">0</field>
+                                                          </shadow>
+                                                        </value>
+                                                        <next>
+                                                          <block type="inout_digital_write" id="]?GGR^`UO^dss0]8elkA">
+                                                            <value name="PIN">
+                                                              <shadow type="math_number" id="R]lR*J!Edp9#dGyxF|C#">
+                                                                <field name="NUM">17</field>
+                                                              </shadow>
+                                                            </value>
+                                                            <value name="STAT">
+                                                              <shadow type="math_number" id="q:HeNhI5X[Ib5f%zS~|Z">
+                                                                <field name="NUM">1</field>
+                                                              </shadow>
+                                                            </value>
+                                                            <next>
+                                                              <block type="base_delay" id=";!W]~/PIN=OtK7wJ#Yfh">
+                                                                <field name="unite">m</field>
+                                                                <value name="DELAY_TIME">
+                                                                  <shadow type="math_number" id="-})LXVaNCIweEfA1|h]#">
+                                                                    <field name="NUM">1000</field>
+                                                                  </shadow>
+                                                                  <block type="variables_get" id="r-YYRD:.-w:=u)z:5AMZ">
+                                                                    <field name="VAR">tempoh</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="inout_digital_write" id="+=XGz]/J=`%aobUk6P[a">
+                                                                    <value name="PIN">
+                                                                      <shadow type="math_number" id="mm~`1Bl*r5{He|$2}_2C">
+                                                                        <field name="NUM">4</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <value name="STAT">
+                                                                      <shadow type="math_number" id=":O9?+t}4tsCYhHh,|8|0">
+                                                                        <field name="NUM">0</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="inout_digital_write" id="t~=d}fx@#/2~GqbIK.pA">
+                                                                        <value name="PIN">
+                                                                          <shadow type="math_number" id="ET7gMQTv:t36,s,ys/AZ">
+                                                                            <field name="NUM">16</field>
+                                                                          </shadow>
+                                                                        </value>
+                                                                        <value name="STAT">
+                                                                          <shadow type="math_number" id=")_e_Oqmu*S6%6pusFHD*">
+                                                                            <field name="NUM">1</field>
+                                                                          </shadow>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="base_delay" id="Vm9v`!,-?jJ*:{j2J@aF">
+                                                                            <field name="unite">m</field>
+                                                                            <value name="DELAY_TIME">
+                                                                              <shadow type="math_number" id="-})LXVaNCIweEfA1|h]#">
+                                                                                <field name="NUM">1000</field>
+                                                                              </shadow>
+                                                                              <block type="variables_get" id=",DLX$2I[J;F|0;%#5~:l">
+                                                                                <field name="VAR">tempoh</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="inout_digital_write" id="c8$iZ=`2kKi6uH2X@`5_">
+                                                                                <value name="PIN">
+                                                                                  <shadow type="math_number" id="Og9{?-:?R7jF~cnwKLhB">
+                                                                                    <field name="NUM">2</field>
+                                                                                  </shadow>
+                                                                                </value>
+                                                                                <value name="STAT">
+                                                                                  <shadow type="math_number" id="l69ghS~^LI*X!wtXufx:">
+                                                                                    <field name="NUM">0</field>
+                                                                                  </shadow>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="inout_digital_write" id="hJ]bRa$;oM9w$[`zkD1U">
+                                                                                    <value name="PIN">
+                                                                                      <shadow type="math_number" id="Yc}F|a7Aa,F56nN9-xaE">
+                                                                                        <field name="NUM">4</field>
+                                                                                      </shadow>
+                                                                                    </value>
+                                                                                    <value name="STAT">
+                                                                                      <shadow type="math_number" id="Mldl:[kA~!2#p|(nzX_i">
+                                                                                        <field name="NUM">1</field>
+                                                                                      </shadow>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="base_delay" id="?2@T5OL15s)rb0XF+3yW">
+                                                                                        <field name="unite">m</field>
+                                                                                        <value name="DELAY_TIME">
+                                                                                          <shadow type="math_number" id="-})LXVaNCIweEfA1|h]#">
+                                                                                            <field name="NUM">1000</field>
+                                                                                          </shadow>
+                                                                                          <block type="variables_get" id="J2_V9HhSe8[Al%Mz5/i*">
+                                                                                            <field name="VAR">tempoh</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="inout_digital_write" id="AawljJz2Q2?w7sH^Hh@!">
+                                                                                            <value name="PIN">
+                                                                                              <shadow type="math_number" id="#{h1sx}GzY`(aCt[yl0:">
+                                                                                                <field name="NUM">15</field>
+                                                                                              </shadow>
+                                                                                            </value>
+                                                                                            <value name="STAT">
+                                                                                              <shadow type="math_number" id="qiY3wm#qPS`A8wAjw,*#">
+                                                                                                <field name="NUM">0</field>
+                                                                                              </shadow>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="inout_digital_write" id="=y%kMgNR|~v]E0SvfcT8">
+                                                                                                <value name="PIN">
+                                                                                                  <shadow type="math_number" id="Ts^0*JWO{Z0~3AwSl9+=">
+                                                                                                    <field name="NUM">2</field>
+                                                                                                  </shadow>
+                                                                                                </value>
+                                                                                                <value name="STAT">
+                                                                                                  <shadow type="math_number" id="XI-(OX^T:b^P#|(Yr{l$">
+                                                                                                    <field name="NUM">1</field>
+                                                                                                  </shadow>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="base_delay" id="+Dq%#tYIy2NYv:iUec[9">
+                                                                                                    <field name="unite">m</field>
+                                                                                                    <value name="DELAY_TIME">
+                                                                                                      <shadow type="math_number" id="-})LXVaNCIweEfA1|h]#">
+                                                                                                        <field name="NUM">1000</field>
+                                                                                                      </shadow>
+                                                                                                      <block type="variables_get" id="LT!!$c7UhO0M$#kYAUpO">
+                                                                                                        <field name="VAR">tempoh</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id=".gKkML?S0M{O!1(@~@$1" x="-37" y="-101">
+    <field name="NAME">kanan</field>
+    <statement name="STACK">
+      <block type="inout_digital_write" id="[{S{-tn+(1B;2uC-I;;J">
+        <value name="PIN">
+          <shadow type="math_number" id=".$OR=H*wGHTL-6cPr[TZ">
+            <field name="NUM">2</field>
+          </shadow>
+        </value>
+        <value name="STAT">
+          <shadow type="math_number" id=")E0/mK~9x/s7_*LMK9Pk">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="inout_digital_write" id="Q|*man+m(izmYVtH)}{;">
+            <value name="PIN">
+              <shadow type="math_number" id="3r|FvDMz^9Cg~VVL@nF#">
+                <field name="NUM">15</field>
+              </shadow>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id="h/3m?SJd;#}J]vVA,9JQ">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="base_delay" id="1@YsdncJn$}V;`15V7%R">
+                <field name="unite">m</field>
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id="-})LXVaNCIweEfA1|h]#">
+                    <field name="NUM">1000</field>
+                  </shadow>
+                  <block type="variables_get" id="t},ow@:Q{(Zl=V78``zr">
+                    <field name="VAR">tempoh</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="inout_digital_write" id="]*nH0-,ZPg=+H`wo^8_-">
+                    <value name="PIN">
+                      <shadow type="math_number" id="vfd/Dgm46b(,m;gg%{p4">
+                        <field name="NUM">4</field>
+                      </shadow>
+                    </value>
+                    <value name="STAT">
+                      <shadow type="math_number" id="f^|M~j.k136)RVzM8^!P">
+                        <field name="NUM">0</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="inout_digital_write" id="]=%HKK$|iJhp*mRGKC!S">
+                        <value name="PIN">
+                          <shadow type="math_number" id="(l$Xqp6R@y98rjY1$jra">
+                            <field name="NUM">2</field>
+                          </shadow>
+                        </value>
+                        <value name="STAT">
+                          <shadow type="math_number" id="ShPh,Oz-2NXkXRL2r}8H">
+                            <field name="NUM">1</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="base_delay" id="g]UUmDa}I_txEdl%IgRB">
+                            <field name="unite">m</field>
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="-})LXVaNCIweEfA1|h]#">
+                                <field name="NUM">1000</field>
+                              </shadow>
+                              <block type="variables_get" id="I(FHywhuGWgFV*1/*B%o">
+                                <field name="VAR">tempoh</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="inout_digital_write" id="]9I.Zw$gA-aC9/)+.2*Z">
+                                <value name="PIN">
+                                  <shadow type="math_number" id="EPCvVpQy^xSA^JkBn.N;">
+                                    <field name="NUM">16</field>
+                                  </shadow>
+                                </value>
+                                <value name="STAT">
+                                  <shadow type="math_number" id="iK:dC5M+^m]lso(ObdFy">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="inout_digital_write" id="-_67oZ*Gb#==H2}a({gK">
+                                    <value name="PIN">
+                                      <shadow type="math_number" id="yFobWLwK~WZB?!+9?Zcq">
+                                        <field name="NUM">4</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="STAT">
+                                      <shadow type="math_number" id="?s-_n^Z(C2N.h2c5Yp`D">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="base_delay" id="57K2ZHbm:~f4/#b7.,hn">
+                                        <field name="unite">m</field>
+                                        <value name="DELAY_TIME">
+                                          <shadow type="math_number" id="-})LXVaNCIweEfA1|h]#">
+                                            <field name="NUM">1000</field>
+                                          </shadow>
+                                          <block type="variables_get" id="O!E+#=LMDcj@@o]iICw:">
+                                            <field name="VAR">tempoh</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="inout_digital_write" id="y.twwdddLtqfN@=Km=*i">
+                                            <value name="PIN">
+                                              <shadow type="math_number" id="UQwgi-KUNuE(jtYtdT(-">
+                                                <field name="NUM">17</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="STAT">
+                                              <shadow type="math_number" id="A9,4EpT+b7STp}LO8ByD">
+                                                <field name="NUM">0</field>
+                                              </shadow>
+                                            </value>
+                                            <next>
+                                              <block type="inout_digital_write" id="Uqus==l-dOc|Wbt:$bsb">
+                                                <value name="PIN">
+                                                  <shadow type="math_number" id="Iem|/{xC~n_1~4PKS8]U">
+                                                    <field name="NUM">16</field>
+                                                  </shadow>
+                                                </value>
+                                                <value name="STAT">
+                                                  <shadow type="math_number" id="Bh_3i,V^K;afS?x[Xc.o">
+                                                    <field name="NUM">1</field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="base_delay" id="-(}UNzCE^oKqwMsp5oLi">
+                                                    <field name="unite">m</field>
+                                                    <value name="DELAY_TIME">
+                                                      <shadow type="math_number" id="-})LXVaNCIweEfA1|h]#">
+                                                        <field name="NUM">1000</field>
+                                                      </shadow>
+                                                      <block type="variables_get" id="QP},6tdYNb.)_)RCMw3L">
+                                                        <field name="VAR">tempoh</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="inout_digital_write" id="eQr$uoz[7lO2hs]Y]fqM">
+                                                        <value name="PIN">
+                                                          <shadow type="math_number" id="1a#Wv]Rag(s*|#%2oaf7">
+                                                            <field name="NUM">5</field>
+                                                          </shadow>
+                                                        </value>
+                                                        <value name="STAT">
+                                                          <shadow type="math_number" id="Pe3K;kRj`5@$tLq=[0mL">
+                                                            <field name="NUM">0</field>
+                                                          </shadow>
+                                                        </value>
+                                                        <next>
+                                                          <block type="inout_digital_write" id="HMYO4cZr9A:8wr!xk,m@">
+                                                            <value name="PIN">
+                                                              <shadow type="math_number" id="[?bh]$D_py..hYwAdfYo">
+                                                                <field name="NUM">17</field>
+                                                              </shadow>
+                                                            </value>
+                                                            <value name="STAT">
+                                                              <shadow type="math_number" id="t%]hxwW/BqiezbzQ0~.#">
+                                                                <field name="NUM">1</field>
+                                                              </shadow>
+                                                            </value>
+                                                            <next>
+                                                              <block type="base_delay" id="]CcMJYSpU#;smlM{0bmZ">
+                                                                <field name="unite">m</field>
+                                                                <value name="DELAY_TIME">
+                                                                  <shadow type="math_number" id="-})LXVaNCIweEfA1|h]#">
+                                                                    <field name="NUM">1000</field>
+                                                                  </shadow>
+                                                                  <block type="variables_get" id="l97UorSN)k}r?%#=`^EG">
+                                                                    <field name="VAR">tempoh</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="inout_digital_write" id="A8s{RUgy{N$uTa4ed^,i">
+                                                                    <value name="PIN">
+                                                                      <shadow type="math_number" id="4G}0tUo2+V=~pp+gLn-=">
+                                                                        <field name="NUM">18</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <value name="STAT">
+                                                                      <shadow type="math_number" id="*V6UBP$4TgcDZ!bZ)c]J">
+                                                                        <field name="NUM">0</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="inout_digital_write" id="QnMA}|jd3NU,RV*)Vn?[">
+                                                                        <value name="PIN">
+                                                                          <shadow type="math_number" id="H{]Zour+MHiYnp)B1,kk">
+                                                                            <field name="NUM">5</field>
+                                                                          </shadow>
+                                                                        </value>
+                                                                        <value name="STAT">
+                                                                          <shadow type="math_number" id="QXcc_Iq9L$=OS{kOG3qm">
+                                                                            <field name="NUM">1</field>
+                                                                          </shadow>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="base_delay" id="MCo35WX-5,)i/sV#[kV0">
+                                                                            <field name="unite">m</field>
+                                                                            <value name="DELAY_TIME">
+                                                                              <shadow type="math_number" id="-})LXVaNCIweEfA1|h]#">
+                                                                                <field name="NUM">1000</field>
+                                                                              </shadow>
+                                                                              <block type="variables_get" id="A(2IqnU^)4:Ym2Bo4mBV">
+                                                                                <field name="VAR">tempoh</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
