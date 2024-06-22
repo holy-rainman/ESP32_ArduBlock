@@ -1,0 +1,654 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all-esp32</toolbox>
+  <block type="procedures_defnoreturn" id="o?%AT,]Fx~8*^v(EV(l3" x="309" y="-371">
+    <field name="NAME">Display_ADC_on_LED</field>
+    <statement name="STACK">
+      <block type="controls_if" id="MWj}1}fPVPkNe,ga},/o">
+        <mutation elseif="6" else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_operation" id="6fpQFsstf;Tf`.bE|rlT">
+            <field name="OP">and</field>
+            <value name="A">
+              <shadow type="math_number" id="DYmqKI{2CPSn@c:P1J?_">
+                <field name="NUM">X</field>
+              </shadow>
+              <block type="logic_compare_log" id="Vb[tQYxtKtN$uK2s|hiK">
+                <field name="OP">GTE</field>
+                <value name="A">
+                  <shadow type="math_number" id=";w[FgMmhh^bq99)$f6N3">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="0#w1Kb)sBHb%2[:c[/T9">
+                    <field name="VAR">POT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="f@x-wS[S1Q/ILTo0OZJ~">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="M-sJ/1l7$2AJGD/P|?9w">
+                <field name="NUM">Y</field>
+              </shadow>
+              <block type="logic_compare_log" id="anv9Vh1+rz-]:+Jl5s;1">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <shadow type="math_number" id=";w[FgMmhh^bq99)$f6N3">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="]_s)[X/@{P:Rj`b0pgM6">
+                    <field name="VAR">POT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="jf5bkSyaszn7=s#uj~WC">
+                    <field name="NUM">512</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="inout_digital_write" id="]?_3D[9{19VO$HxJl`7j">
+            <value name="PIN">
+              <shadow type="math_number" id="O2KLU`j)jO$0*eJ{qhxU">
+                <field name="NUM">19</field>
+              </shadow>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id="BWdp*iwa/tO$hRz]%,hu">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_write" id=":BJGK8:lCls=2;6Zx{OL">
+                <value name="PIN">
+                  <shadow type="math_number" id="9ud%RkZv{lt?KW|0qA7_">
+                    <field name="NUM">18</field>
+                  </shadow>
+                </value>
+                <value name="STAT">
+                  <shadow type="math_number" id="JJ533Tz0+MI^X7/vAn?j">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_operation" id=")^AvLgb2ud$t2]~m,mN]">
+            <field name="OP">and</field>
+            <value name="A">
+              <shadow type="math_number" id="DYmqKI{2CPSn@c:P1J?_">
+                <field name="NUM">X</field>
+              </shadow>
+              <block type="logic_compare_log" id="]aJC+unhWi|*q34s)~BD">
+                <field name="OP">GTE</field>
+                <value name="A">
+                  <shadow type="math_number" id=";w[FgMmhh^bq99)$f6N3">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="D;M?BG/ciZAge/*fAv!,">
+                    <field name="VAR">POT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="V%SmG?yx7qJN}B:[Y]!H">
+                    <field name="NUM">512</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="M-sJ/1l7$2AJGD/P|?9w">
+                <field name="NUM">Y</field>
+              </shadow>
+              <block type="logic_compare_log" id="5Tf`R#l.z.W#WO)chqHA">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <shadow type="math_number" id=";w[FgMmhh^bq99)$f6N3">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="6qrKjqk4uIHzNORIw-Nn">
+                    <field name="VAR">POT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="JPj2b0_9x,*FRSl$~Z53">
+                    <field name="NUM">1024</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="inout_digital_write" id=";,|)G_v.A7FcKuc=!z:6">
+            <value name="PIN">
+              <shadow type="math_number" id="Z{{SSRTg+#Zw$%H]7Vxp">
+                <field name="NUM">18</field>
+              </shadow>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id=":FY6%$XVnLtP76,rwgB3">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_write" id="C*]-@eAhrJdcm-Ky%C:F">
+                <value name="PIN">
+                  <shadow type="math_number" id="6a57;~)UIz4G3ceRrn15">
+                    <field name="NUM">5</field>
+                  </shadow>
+                </value>
+                <value name="STAT">
+                  <shadow type="math_number" id="=MCpaU~ZQLJOPx}sNU^3">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF2">
+          <block type="logic_operation" id="Vkb--QFkUAsJ7LcqafE6">
+            <field name="OP">and</field>
+            <value name="A">
+              <shadow type="math_number" id="DYmqKI{2CPSn@c:P1J?_">
+                <field name="NUM">X</field>
+              </shadow>
+              <block type="logic_compare_log" id="-rC+s@s0w/AY7|Plkvqx">
+                <field name="OP">GTE</field>
+                <value name="A">
+                  <shadow type="math_number" id=";w[FgMmhh^bq99)$f6N3">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id=";[{i6FL$$y5=4lV7GowK">
+                    <field name="VAR">POT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="+2*z8A_1{W3aci:MOu}?">
+                    <field name="NUM">1024</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="M-sJ/1l7$2AJGD/P|?9w">
+                <field name="NUM">Y</field>
+              </shadow>
+              <block type="logic_compare_log" id="O?[WGEY$rg=t/A|-41i`">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <shadow type="math_number" id=";w[FgMmhh^bq99)$f6N3">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="OdjLoT!@@ZQ3T1SvhXSZ">
+                    <field name="VAR">POT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="~lnKYN17|OD493GFXwbT">
+                    <field name="NUM">1536</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block type="inout_digital_write" id="n@l_}[8;3bI(?}9_X4b2">
+            <value name="PIN">
+              <shadow type="math_number" id="C;j+x-XCl:f?-O-z|{JX">
+                <field name="NUM">5</field>
+              </shadow>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id="=vL:9CZTorJRlSu#hQwn">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_write" id="qon+CK6u{;}Lr_NIb*+#">
+                <value name="PIN">
+                  <shadow type="math_number" id="v:TAwrEAXful_AY!%MKA">
+                    <field name="NUM">17</field>
+                  </shadow>
+                </value>
+                <value name="STAT">
+                  <shadow type="math_number" id="KEo;E*]w6_pUsW`LLqy6">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF3">
+          <block type="logic_operation" id="XoQA)4{-k?YgH$;`vs=o">
+            <field name="OP">and</field>
+            <value name="A">
+              <shadow type="math_number" id="DYmqKI{2CPSn@c:P1J?_">
+                <field name="NUM">X</field>
+              </shadow>
+              <block type="logic_compare_log" id="I(iyK*hBoY,1v;%jf0{t">
+                <field name="OP">GTE</field>
+                <value name="A">
+                  <shadow type="math_number" id=";w[FgMmhh^bq99)$f6N3">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="AlAV^w;Rd-H`0lZ.UfGW">
+                    <field name="VAR">POT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="oKB8pC^CxwE[d[IR:!+z">
+                    <field name="NUM">1536</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="M-sJ/1l7$2AJGD/P|?9w">
+                <field name="NUM">Y</field>
+              </shadow>
+              <block type="logic_compare_log" id="8r$Mj%ia6/LeES~*p3+2">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <shadow type="math_number" id=";w[FgMmhh^bq99)$f6N3">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="^zmWh//VVPX:~~#2/~td">
+                    <field name="VAR">POT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="h/gf1s@Y{OsbQbb+os;c">
+                    <field name="NUM">2048</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO3">
+          <block type="inout_digital_write" id="UArzK^5BJS!=F/cBUa_X">
+            <value name="PIN">
+              <shadow type="math_number" id="YCjuYj}[~K-,B4I,dlpy">
+                <field name="NUM">17</field>
+              </shadow>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id="x8)COL*G?Pn4Pr;I-Rh$">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_write" id="`!-#_$J+o!mw+s?yS7x=">
+                <value name="PIN">
+                  <shadow type="math_number" id="|5Kpy.PYrXYG5Z?;a(#q">
+                    <field name="NUM">16</field>
+                  </shadow>
+                </value>
+                <value name="STAT">
+                  <shadow type="math_number" id="D5a.e#FMmJ.V9GW4y2sq">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF4">
+          <block type="logic_operation" id="j4yVhWIEnw1f=biM$=8,">
+            <field name="OP">and</field>
+            <value name="A">
+              <shadow type="math_number" id="DYmqKI{2CPSn@c:P1J?_">
+                <field name="NUM">X</field>
+              </shadow>
+              <block type="logic_compare_log" id="oTM6;LOto]HZS+wn$*96">
+                <field name="OP">GTE</field>
+                <value name="A">
+                  <shadow type="math_number" id=";w[FgMmhh^bq99)$f6N3">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="j~:^E^89qpzSl-ID[hrx">
+                    <field name="VAR">POT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="YJ4i.7LvJK_*YnWe.sn(">
+                    <field name="NUM">2048</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="M-sJ/1l7$2AJGD/P|?9w">
+                <field name="NUM">Y</field>
+              </shadow>
+              <block type="logic_compare_log" id="rP{1i4T~J[emeomxn`lD">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <shadow type="math_number" id=";w[FgMmhh^bq99)$f6N3">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="9-V(5{lms=c6pp0Xl4Bl">
+                    <field name="VAR">POT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="+/+@+{crKnUXn(qmjKDd">
+                    <field name="NUM">2560</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO4">
+          <block type="inout_digital_write" id="n?r=b)?3.`z}?beiLvs{">
+            <value name="PIN">
+              <shadow type="math_number" id="Fw3_b6pSAB.#]lT~4~N@">
+                <field name="NUM">16</field>
+              </shadow>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id="C5zc3:MErYWziNthl]}[">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_write" id="pfqwt~h~kth+Cr#-dq2f">
+                <value name="PIN">
+                  <shadow type="math_number" id="l1DduN4^uE%B3d$OR#8X">
+                    <field name="NUM">4</field>
+                  </shadow>
+                </value>
+                <value name="STAT">
+                  <shadow type="math_number" id="?]oelwbFJVQ(._;B6h,C">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF5">
+          <block type="logic_operation" id=".ohp5ye)]6q{wklPcno*">
+            <field name="OP">and</field>
+            <value name="A">
+              <shadow type="math_number" id="DYmqKI{2CPSn@c:P1J?_">
+                <field name="NUM">X</field>
+              </shadow>
+              <block type="logic_compare_log" id="_|xXYElBcP*hWm_;k!c6">
+                <field name="OP">GTE</field>
+                <value name="A">
+                  <shadow type="math_number" id=";w[FgMmhh^bq99)$f6N3">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="OpY6x3BB%it[)2ZRU0rc">
+                    <field name="VAR">POT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="!xlI9sg]:b^8`M{V_G_B">
+                    <field name="NUM">2560</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="M-sJ/1l7$2AJGD/P|?9w">
+                <field name="NUM">Y</field>
+              </shadow>
+              <block type="logic_compare_log" id="mJHdNq,+d42z7.:e@/%m">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <shadow type="math_number" id=";w[FgMmhh^bq99)$f6N3">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="}V0z_4%D-`dXs,mgQ=v@">
+                    <field name="VAR">POT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="1W+je[:p]48/iNr@:q8q">
+                    <field name="NUM">3072</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO5">
+          <block type="inout_digital_write" id="E=O!*??Iw4zP{MS/8T6-">
+            <value name="PIN">
+              <shadow type="math_number" id="vLikA$KAO}BWV(O+k`zV">
+                <field name="NUM">4</field>
+              </shadow>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id="DT|wC=oTW$-FNyVrSH+U">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_write" id="/;Yh)|Y(^#)j|Zym`zXj">
+                <value name="PIN">
+                  <shadow type="math_number" id="LaK@Ko8Gv(9h96LWiIg{">
+                    <field name="NUM">2</field>
+                  </shadow>
+                </value>
+                <value name="STAT">
+                  <shadow type="math_number" id="NKJa.IYCQV.^dQKVy0g`">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF6">
+          <block type="logic_operation" id="J$xqqR|Cfgr@`5?B?A^y">
+            <field name="OP">and</field>
+            <value name="A">
+              <shadow type="math_number" id="DYmqKI{2CPSn@c:P1J?_">
+                <field name="NUM">X</field>
+              </shadow>
+              <block type="logic_compare_log" id="];nPHuUt:hg)c]3liU)X">
+                <field name="OP">GTE</field>
+                <value name="A">
+                  <shadow type="math_number" id=";w[FgMmhh^bq99)$f6N3">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="+vvU-#0atJZQrQ`lV|vS">
+                    <field name="VAR">POT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="~5P/jVId3*fj6#+^G,ir">
+                    <field name="NUM">3072</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="M-sJ/1l7$2AJGD/P|?9w">
+                <field name="NUM">Y</field>
+              </shadow>
+              <block type="logic_compare_log" id="?Jeemg6DJi{EwW5#h$9^">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <shadow type="math_number" id=";w[FgMmhh^bq99)$f6N3">
+                    <field name="NUM">R</field>
+                  </shadow>
+                  <block type="variables_get" id="jxEK-TGN/JZF:!Te|O^W">
+                    <field name="VAR">POT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id=";#WRx@V*71B:UCl|3D=O">
+                    <field name="NUM">3584</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO6">
+          <block type="inout_digital_write" id="F.RpuIOmUbz[k`D(+P+p">
+            <value name="PIN">
+              <shadow type="math_number" id="?,pNH;MF4;4LkfB7}B{b">
+                <field name="NUM">2</field>
+              </shadow>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id="wD2F)L2|6XA7Zjz*gNqW">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="inout_digital_write" id="nD1ysrsLIfVMA_e(Ev.c">
+                <value name="PIN">
+                  <shadow type="math_number" id="ti@vq@K.nm%uR.4sH/).">
+                    <field name="NUM">15</field>
+                  </shadow>
+                </value>
+                <value name="STAT">
+                  <shadow type="math_number" id="^3%/ibi2FaY2#D(d?%pO">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="inout_digital_write" id="f1bZ`Xba[ntmcTQSG+qg">
+            <value name="PIN">
+              <shadow type="math_number" id="J~^8ZVYv`#K03QheLX5k">
+                <field name="NUM">15</field>
+              </shadow>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id="48HK0z?-/%K6GxKJrz}g">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="arduino_setup" id="rbv_S7wn6gnXc8_[8l#=" x="-208" y="223">
+    <statement name="MySetup">
+      <block type="variables_set_init" id="FlMgL^Ui2;!0)4Q+_*:]">
+        <field name="VAR">POT</field>
+        <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+        <value name="VALUE">
+          <block type="math_number" id=".EWd[qc~CA0v2=UBOra/">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set_init" id="zv{EPNWe]R^VC:L-yqEp">
+            <field name="VAR">LDR</field>
+            <field name="VARIABLE_SETTYPE_TYPE">NUMBER</field>
+            <value name="VALUE">
+              <block type="math_number" id="|Pw?vl(r0h^P;;(gG,|L">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="serial_init8866" id="Bwq60nu0W)q;aOf0K?Rz">
+                <field name="pin">0</field>
+                <field name="SPEED">9600</field>
+                <next>
+                  <block type="serial_write_ln" id="0j/]o8fkJ3_ylptm[cAB">
+                    <value name="CONTENT">
+                      <shadow type="text" id="kj.qkMRI7MujBr8q^mZ}">
+                        <field name="TEXT"> </field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="MyLoop">
+      <block type="variables_set" id="916W!J5N!n[:Kpv;nI+G">
+        <field name="VAR">POT</field>
+        <value name="VALUE">
+          <block type="inout_analog_read_esp" id="w5i-3[yA7sp^Wk^^ijwg">
+            <value name="PIN">
+              <shadow type="math_number" id="w^M+XS1;Co5:4C685@br">
+                <field name="NUM">34</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="$Wn;`Oi+#./]/Ayz(+B/">
+            <field name="VAR">LDR</field>
+            <value name="VALUE">
+              <block type="inout_analog_read_esp" id="A;V}s.l2AkvI88hSo`Q/">
+                <value name="PIN">
+                  <shadow type="math_number" id="I;d8MHWr@VSWK|HY%EWO">
+                    <field name="NUM">35</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="serial_write_ln" id="tQw}I;F!Ede,Wq]1qCg0">
+                <value name="CONTENT">
+                  <shadow type="text" id="zKShu_8CWf$Ux~Qrf-jf">
+                    <field name="TEXT">ArduBlock</field>
+                  </shadow>
+                  <block type="text_join" id="OJefgE)Y~WNb%GeT/Ma,">
+                    <mutation items="4"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="nTOuqnzJ@{5krY7Q)plU">
+                        <field name="TEXT">Potentiometer: </field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="variables_get" id="r(D/qwtQic=Su?l0qu$_">
+                        <field name="VAR">POT</field>
+                      </block>
+                    </value>
+                    <value name="ADD2">
+                      <block type="text" id="r))t?IslQNVaf[D+3tX.">
+                        <field name="TEXT">  LDR: </field>
+                      </block>
+                    </value>
+                    <value name="ADD3">
+                      <block type="variables_get" id="spV([ibscsz;BY~gBZ4_">
+                        <field name="VAR">LDR</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="procedures_callnoreturn" id="5=@L@@CayhFC3+$NV-6u">
+                    <mutation name="Display_ADC_on_LED"></mutation>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
